@@ -1,0 +1,28 @@
+body,html,div,p,input,ul,li,dd,dt,dl,ol,img,hr,form,header,nav,footer{
+	padding: 0;
+	margin: 0;
+}
+img{
+	display: block;
+}
+p:nth-of-type{
+	
+}
+li{
+	list-style: none;
+}
+
+a{
+	
+	text-decoration: none;
+	color: #000000;
+}
+body{
+	font-family: "微软雅黑";
+}
+/*body{
+	width: 100%;
+}*/
+i{
+	font-style: normal;
+}

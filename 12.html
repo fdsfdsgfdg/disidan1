@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box1 li{
+				visibility: hidden;
+			}
+			#box1,#box2{
+				float: left;
+			}
+			#bbox{
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div id = "bbox">
+			<div id ="box2">
+			<ul>
+				<li>1-1</li>
+				<li>1-2</li>
+				<li>1-3</li>
+				<li>1-4</li>
+				<li>1-5</li>
+				<li>1-6</li>
+				<li>1-7</li>
+			</ul>
+		</div>
+			<div id="box1">
+				<ul>
+					<li>2-1</li>
+					<li>2-2</li>
+					<li>2-3</li>
+					<li>2-4</li>
+					<li>2-5</li>
+					<li>2-6</li>
+					<li>2-7</li>
+				</ul>
+			</div>
+		</div>
+		
+	</body>
+</html>
+<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+<script type="text/javascript">
+	let li1 = $("#box2 ul li");
+	let li2 = $("#box1 ul li");
+	let bbox = $("#bbox");
+	bbox.on("mouseover",function(){
+		li1.each(function(i){
+			$(li1[i]).on("mouseover",bbox,function(){
+				$(li2[i]).css({"visibility" : "visible"}).siblings().css({"visibility" : "hidden"});
+			});	
+		});
+	});
+	li2.on("mouseover",function(){
+		$(this).css({"visibility" : "visible"});
+	});
+	//当你移出 li2 和 li1时 会触发事件冒泡
+	li2.on("mouseout",function(event){
+		let e = event || window.event;
+		e.stopPropagation();	
+	});
+	li1.on("mouseout",function(event){
+		let e = event || window.event;
+		e.stopPropagation();		
+	});
+	bbox.on("mouseout",function(){	
+		li2.css({"visibility" : "hidden"});
+	});
+
+</script>

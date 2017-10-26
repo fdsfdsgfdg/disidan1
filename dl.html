@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登陆</title>
+		<link rel="stylesheet" type="text/css" href="css/pubilc.css"/>
+		<link rel="stylesheet" type="text/css" href="css/dl.css"/>
+		<link rel="stylesheet" type="text/css" href="css/dl_d.css"/>
+	</head>
+
+	<body>
+		<nav id="navclass">
+			<div class="dl_nav">
+				<ul class="dl_nav_l">
+					<li v-for = "list in navlist"><a href="javascript:;">{{list.message}}</a></li>
+				</ul>
+				<ul class="dl_nav_r">
+					<li class="dl_btn"><a href=""><img src="img/akari.jpg"/></a></li>
+					<li><a href="">历史</a></li>
+					<li class="dl_tg"><a href="">投稿</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<!--nav!igm-->
+		<div class="nav_igm">
+			<div class="nav_igm_a"><img src="img/rl_top.35edfde.png" alt="" /></div>
+			
+		</div>
+		
+		<!--内容部分-->
+		<div class="dl_body_input">
+			<div class="dl_body_input_box">
+				<div class="dl_body_input_box_dl"><span id="">登录</span></div>
+				<div class="nav_igm_box">
+					<div class="nav_igm_box_l lr"><!--左边部分先占个位--></div>
+					<div class="nav_igm_box_r lr">
+						<div>
+							<input type="text" name="" id="" value="" placeholder="你的手机号/邮箱"/><span></span>
+							<p></p>
+						</div>
+						<div>
+							<input type="" name="" id="" value="" placeholder="密码"/><i></i>
+							<p></p>
+						</div>
+						<div></div>
+						<div>
+							<input type="checkbox" name="" value="" id="ckbox"/><label for="ckbox">记住我</label>
+							<span>不是在自己的电脑上不要勾选此项</span>
+							
+							<a href="">无法验证？</a>
+							<a href="">忘记密码？</a>
+						</div>
+						<div>
+							<a href="">登录</a>
+							<a href="">注册</a>
+						</div>
+						<div>
+							<a href="">
+								<i class="i1"></i>
+								<span>微博账号登录</span>
+							</a>
+							<a href="">
+								<i class="i2"></i>
+								<span>QQ账号登录</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<!--foot-->
+		<footer id = "foot">
+			<div class="foot_nav">
+				<div class="dl_foot_b_one f_d s">
+					<p>bilibili</p>
+					<div class="dl_foot_b_one_list ">
+						<a v-for = "f1 in f1s" href="javascript:;">{{f1.message}}</a>
+					</div>	
+				</div>
+				<div class="dl_foot_b_two f_d s">
+					<p>传送门</p>
+					<div class="dl_foot_b_one_list">
+						<a href="javascript:;" v-for = "f2 in f2s">{{f2.message}}</a>
+					</div>
+				</div>
+				<div class="dl_foot_b_three f_d">
+					<a href="#" class="dl_foot_b_three_a">
+						<div></div>
+						<span>官方微信</span>
+					</a>
+					<a href="#" class="dl_foot_b_three_a">
+						<div></div>
+						<span>官方微信</span>
+					</a>
+					<a href="#" class="dl_foot_b_three_a">
+						<div></div>
+						<span>官方微信</span>
+					</a>
+				</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/dl.js"></script>

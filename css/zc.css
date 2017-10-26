@@ -1,0 +1,31 @@
+.lr {
+  width: 100% !important; }
+
+.nav_igm_box_r {
+  padding-left: 30% !important; }
+
+.nav_igm_box_r > div:nth-of-type(5) a {
+  width: 408px !important;
+  background-color: #ffffff !important;
+  color: #555555 !important;
+  border: 1px solid #cccccc !important;
+  font-size: 12px; }
+
+.zc_l {
+  width: 408px !important; }
+  .zc_l .lable a {
+    color: #35a3d6; }
+
+.zc_dl {
+  width: 408px !important; }
+  .zc_dl a {
+    display: inline !important;
+    color: #35a3d6;
+    font-size: 12px;
+    float: right;
+    margin-right: 0 !important; }
+  .zc_dl a:hover {
+    color: #F35C8F !important;
+    cursor: pointer !important; }
+
+/*# sourceMappingURL=zc.css.map */

@@ -1,0 +1,127 @@
+@charset "utf-8";
+@mixin wh($w,$d){
+    width: $w;
+    height: $d;
+}
+@mixin cf($c,$f){
+    color: $c;
+    font-size: $f;
+}
+nav{
+   @include wh(100%,36px);
+}
+.dl_nav{
+   @include wh(992px,36px);
+   margin: 0 auto;
+   
+   .dl_nav_l{
+       float: left;
+       li{
+           float: left;
+           height: 36px;
+           line-height: 36px;
+           a{
+               @include cf(#717171,12px);
+               padding: 0 11px;
+           }
+       }
+   }
+   
+   .dl_nav_r{
+       float: right;
+       li{
+           float: left;
+           height: 36px;
+           line-height: 36px;
+           a{
+               @include cf(#717171,12px);
+               padding: 0 11px;
+           }
+       }
+       .dl_btn{
+           a{
+               display: inline-block;
+           }
+           a img{
+               @include wh(36px,36px);
+           }
+       }
+       .dl_tg{
+           background: url(../img/下载.png) no-repeat ;
+           @include wh(58px,50px);
+           text-align: center;
+          a{
+             color: white;
+             font-size: 14px;
+          }
+       }
+       
+   }
+}
+
+.nav_igm{
+   @include wh(100%,106px);
+   margin: 0 auto;
+   background-color: #00a0d8;
+    .nav_igm_a{
+         @include wh(992px,106px);
+         margin: 0 auto;
+        img{
+        @include wh(992px,113px);
+       } 
+    }
+  
+}
+
+footer{
+    width: 100%;
+    background-color: #f6f9fa;
+    padding: 40px 0;
+    .foot_nav{
+        @include wh(992px,114px);margin: 0 auto;
+         display: flex;
+    flex-flow: row nowrap;
+    }
+}
+.f_d{
+    padding: 0 3%;
+    width: 27.333333%;
+    border-right: 1px solid #e5e9ef;
+}
+.s{
+    
+    p:nth-of-type(1){
+       
+        @include cf(#99a2aa,14px);
+        margin-bottom: 24px;
+    }
+    a{
+        display: block;
+        width: 33.33333%;
+        float: left;
+        @include cf(#222222,14px);
+    }
+    a:hover{
+        color: #00a1d6;
+    }
+}
+
+.f_d:last-child{
+    border-right: 0 ;
+}
+
+.dl_foot_b_three_a{
+    display: inline-block;
+    width: 30.33333%;
+    text-align: center;
+    margin: 0 auto;
+    span{
+        @include cf(#222222,12px);
+    }
+    div{
+        @include wh(56px,56px);
+        background:url(../img/icons.png) no-repeat -1092px -68px;
+        position: relative;
+        left: 7px;
+    }
+}

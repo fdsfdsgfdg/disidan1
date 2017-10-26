@@ -1,0 +1,119 @@
+@charset "utf-8";
+@mixin wh($w,$d){
+    width: $w;
+    height: $d;
+}
+@mixin cf($c,$f){
+    color: $c;
+    font-size: $f;
+}
+@mixin mwh($mw,$mh){
+    width: $mw;
+    min-height: $mh;
+}
+.dl_body_input{
+    width: 100%;
+    margin-top: 30px;
+    .dl_body_input_box{
+        @include mwh(992px,400px); margin: 0 auto;
+    }
+    
+}
+.dl_body_input_box_dl{
+    @include wh(996px,24px);
+    border-bottom: 1px solid #dddddd;
+    text-align: center;
+    span{
+        display: inline-block;
+        @include cf(#666666,40px);
+        background-color: white;
+        padding: 0 20px;
+    }
+}
+.nav_igm_box{
+    @include mwh(992px,200px);
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 46px;
+}
+
+.lr{
+    width: 50%;
+}
+.nav_igm_box_r{
+    width: 45%;
+    padding-left: 5%;
+    >div:nth-of-type(1),>div:nth-of-type(2){
+        height: 75px;
+        input{
+            width: 408px !important;
+            height: 40px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            outline: none;
+            text-indent: 10px;
+            color: #dddddd;
+        }
+        i{
+            display: inline-block;
+        }
+        p{
+            color: #f66495;
+        }
+    }
+    >div:nth-of-type(3){}
+    >div:nth-of-type(4){
+        font-size: 12px;
+        #ckbox{margin-right: 6px;border: 1px solid #000000; outline: none;}
+        span{color: #bbbbbb; margin-left: 13px;margin-right: 40px;}
+        a{color: #00a1d6;}
+    }
+    >div:nth-of-type(5){
+        margin-top: 13px;
+        a{
+            display: inline-block;
+            @include wh(184px,36px);
+            line-height: 36px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        a:nth-of-type(1){
+            background-color: #00a7de;
+            color: white;
+            border: 1px solid #0381aa;
+          font-size: 12px;
+          margin-right: 36px;
+        }
+        a:nth-of-type(2){
+            background-color: #ffffff;
+            color: #555555;
+            border: 1px solid #cccccc;
+          font-size: 12px;
+        }
+    }
+    >div:nth-of-type(6){
+        margin-top: 12px;
+        height: 21px;
+        line-height: 21px;
+        a {
+           i{
+                display: inline-block;
+                @include wh(21px,21px);
+            } 
+            .i1{
+                background: url(../img/qq.png) no-repeat 0px 0px;
+                
+            }
+            .i2{
+                background: url(../img/qq.png) no-repeat 0px -41px;
+            }
+            span{
+               @include cf(#717171,12px);
+               position: relative;
+               top: -5px;
+            }
+        }
+        a:nth-of-type(1){margin-right: 24px;}
+       
+    }
+}
